@@ -1,0 +1,6 @@
+[build]
+  publish = "public"  # This should be the directory containing your index.html
+  functions = "functions"
+
+[functions]
+  directory = "functions"

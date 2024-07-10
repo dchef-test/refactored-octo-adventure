@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #cb4e53;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 17px -2px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo img {
+    width: 70px;
+    height: 70px; /* Adjust dimensions as needed */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the navbar items */
+    flex-grow: 1; /* Make the navbar take available space */
+}
+
+.navbar a {
+    margin: 0 15px; /* Adjust margin for better spacing */
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize; /* Start with uppercase and continue with lowercase */
+    text-decoration: none; /* Remove underline */
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push buttons to the right */
+}
+
+.buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px; /* Adjust spacing between buttons */
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Example hover effect */
+    border-radius: 50%; /* Example border-radius for buttons */
+}
+
+.login-section {
+    background-color: white;
+    width: 350px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 150px; /* Adjust spacing from header */
+    margin-bottom: 20px; /* Adjust spacing from footer */
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.textbox input {
+    width: 100%; /* Full width of parent */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 40px; /* Adjust padding-left for icon */
+}
+
+.textbox input:focus {
+    background-color: #e0e0e0; /* Example focus state */
+}
+
+.textbox input::placeholder {
+    color: #999;
+}
+
+.textbox i {
+    position: absolute;
+    top: 50%;
+    left: 15px; /* Adjust left position for icon */
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.btn {
+    width: 100%;
+    background-color: #cb4e53;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #af4246; /* Example hover color */
+}

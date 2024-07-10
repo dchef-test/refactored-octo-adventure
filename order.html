@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login-style.css">
+    <style>
+        main.content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .order-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            text-align: center;
+        }
+
+        form {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>Order</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="İmages/images/logo.png" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Products</a>
+            <a href="#">Review</a>
+            <a href="#">Contact</a>
+            <a href="#">Blogs</a>
+        </nav>
+        <div class="buttons">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+            <button>
+                <i class="fas fa-home"></i>
+            </button>
+            <button>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="order-container">
+            <h1>Place Your Order</h1>
+            <form action="/.netlify/functions/submit-order" method="POST">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes"></textarea>
+                <input type="submit" class="btn" value="Submit Order">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
